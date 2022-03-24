@@ -1,0 +1,16 @@
+service other_over
+{
+    disable = no
+    type = UNLISTED
+    wait = no
+    server = /home/other_over/run.sh
+    socket_type = stream
+    protocol = tcp
+    user = other_over
+    host = 127.0.0.1
+    port = 1337
+    flags = REUSE
+    per_source = 5
+    rlimit_cpu = 3
+    nice = 18
+}
